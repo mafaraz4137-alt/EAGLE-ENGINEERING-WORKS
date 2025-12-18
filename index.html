@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EAGLE ENGINEERING WORKS</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#1e3c72" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="watermark">This project is designed by Ahmad</div>
+
+<div class="top-bar">
+  <h1>EAGLE ENGINEERING WORKS</h1>
+  <div class="count">Total Products: <span id="count">0</span></div>
+</div>
+
+<div class="container">
+  <input type="text" id="search" placeholder="Search product..." onkeyup="searchProduct()" class="search">
+
+  <div class="form">
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="productQty" placeholder="Quantity (default 0)">
+    <input type="number" id="productPrice" placeholder="Price (default 0)">
+    <button onclick="addProduct()">Save Product</button>
+  </div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="inventory"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
+</body>
+</html>

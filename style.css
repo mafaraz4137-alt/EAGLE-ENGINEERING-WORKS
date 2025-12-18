@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  color: white;
+}
+
+.watermark {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  opacity: 0.35;
+  font-size: 13px;
+}
+
+.top-bar {
+  text-align: center;
+  padding: 15px;
+}
+
+.container {
+  background: white;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
