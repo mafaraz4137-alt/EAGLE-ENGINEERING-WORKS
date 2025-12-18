@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EAGLE ENGINEERING WORKS</title>
 
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#1e3c72" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e3c72">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -23,8 +23,8 @@
 
   <div class="form">
     <input type="text" id="productName" placeholder="Product Name">
-    <input type="number" id="productQty" placeholder="Quantity (default 0)">
-    <input type="number" id="productPrice" placeholder="Price (default 0)">
+    <input type="number" id="productQty" placeholder="Quantity">
+    <input type="number" id="productPrice" placeholder="Price">
     <button onclick="addProduct()">Save Product</button>
   </div>
 
@@ -44,12 +44,17 @@
   </div>
 </div>
 
+<!-- ✅ SUPABASE CDN (SIRF EK DAFA) -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- ✅ MAIN SCRIPT -->
 <script src="script.js"></script>
+
 <script>
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js");
   }
 </script>
+
 </body>
 </html>
